@@ -2,6 +2,8 @@ package br.com.course.core.exception.enums;
 
 public enum ErrorCodeEnum {
     ON0001("Invalid tax number", "ON-0001"),
+    ON0002("Unavailable tax number", "ON-0002"),
+    ON0003("Unavailable email", "ON-0003"),
     TR0001("Shopkeeper cannot transfer a value", "TR-0001"),
     TR0002("Insufficient funds", "TR-0002"),
     AU0001("Invalid pin length", "AU-0001"),

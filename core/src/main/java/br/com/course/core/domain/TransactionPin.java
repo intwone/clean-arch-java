@@ -32,11 +32,12 @@ public class TransactionPin {
         this.updatedAt = updatedAt;
     }
 
-    public TransactionPin(User user, String pin, Integer attempt, Boolean isBlocked) {
+    public TransactionPin(User user) {
+        int ATTEMPT_MAX = 3;
+
         this.user = user;
-        this.pin = pin;
-        this.attempt = attempt;
-        this.isBlocked = isBlocked;
+        this.attempt = ATTEMPT_MAX;
+        this.isBlocked = false;
         this.createdAt = LocalDateTime.now();
     }
 
@@ -81,7 +82,7 @@ public class TransactionPin {
     }
 
     public void setAttempt(Integer attempt) {
-        this.attempt = attempt;
+       this.attempt = attempt;
     }
 
     public Boolean getBlocked() {
